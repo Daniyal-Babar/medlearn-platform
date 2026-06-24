@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "MedLearn",
   icons: {
-    icon: "/icon4.svg",
+    icon: "/iconPulse.svg",
   },
   description:
     "Premium medical lectures, notes and resources. Subscribe to unlock expert-led video courses and ace your medical exams.",
