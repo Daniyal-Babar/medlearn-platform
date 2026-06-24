@@ -6,7 +6,7 @@ export default function Logo({ className = "" }: { className?: string }) {
       <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 text-white shadow-sm transition-transform group-hover:scale-105">
         {/* medical cross / pulse mark */}
         <svg
-          viewBox="0 0 24 24"
+          viewBox="0 0 22 22"
           className="h-5 w-5"
           fill="none"
           stroke="currentColor"
