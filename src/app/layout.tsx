@@ -15,7 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MedLearn — Master Medicine with Expert-Led Lectures",
+  title: "MedLearn",
+  icons: {
+    icon: "/icon4.svg",
+  },
   description:
     "Premium medical lectures, notes and resources. Subscribe to unlock expert-led video courses and ace your medical exams.",
 };
