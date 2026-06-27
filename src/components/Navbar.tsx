@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Logo from "./Logo";
+import { SignInButton, SignUpButton, UserButton, useAuth } from "@clerk/nextjs";
 
 const navLinks = [
   { href: "/lectures", label: "Lectures" },
@@ -14,6 +15,7 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const { isSignedIn } = useAuth();
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-md">
@@ -39,18 +41,22 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Link
-            href="/sign-in"
-            className="text-sm font-semibold text-slate-700 transition-colors hover:text-slate-900"
-          >
-            Sign in
-          </Link>
-          <Link
-            href="/sign-up"
-            className="rounded-lg bg-teal-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-teal-700"
-          >
-            Get started
-          </Link>
+          {!isSignedIn ? (
+            <>
+              <SignInButton mode="modal">
+                <button className="text-sm font-semibold text-slate-700 transition-colors hover:text-slate-900">
+                  Sign in
+                </button>
+              </SignInButton>
+              <SignUpButton mode="modal">
+                <button className="rounded-lg bg-teal-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-teal-700">
+                  Get started
+                </button>
+              </SignUpButton>
+            </>
+          ) : (
+            <UserButton />
+          )}
         </div>
 
         {/* Mobile toggle */}
@@ -86,20 +92,30 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="mt-2 flex flex-col gap-2 border-t border-slate-100 pt-3">
-              <Link
-                href="/sign-in"
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2 text-center text-sm font-semibold text-slate-700 hover:bg-slate-100"
-              >
-                Sign in
-              </Link>
-              <Link
-                href="/sign-up"
-                onClick={() => setOpen(false)}
-                className="rounded-lg bg-teal-600 px-3 py-2 text-center text-sm font-semibold text-white hover:bg-teal-700"
-              >
-                Get started
-              </Link>
+              {!isSignedIn ? (
+                <>
+                  <SignInButton mode="modal">
+                    <button
+                      onClick={() => setOpen(false)}
+                      className="w-full rounded-lg px-3 py-2 text-center text-sm font-semibold text-slate-700 hover:bg-slate-100"
+                    >
+                      Sign in
+                    </button>
+                  </SignInButton>
+                  <SignUpButton mode="modal">
+                    <button
+                      onClick={() => setOpen(false)}
+                      className="w-full rounded-lg bg-teal-600 px-3 py-2 text-center text-sm font-semibold text-white hover:bg-teal-700"
+                    >
+                      Get started
+                    </button>
+                  </SignUpButton>
+                </>
+              ) : (
+                <div className="px-3 py-2 flex justify-center">
+                  <UserButton />
+                </div>
+              )}
             </div>
           </div>
         </div>
