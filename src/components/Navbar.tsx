@@ -8,6 +8,8 @@ import { SignInButton, SignUpButton, UserButton, useAuth } from "@clerk/nextjs";
 
 const navLinks = [
   { href: "/lectures", label: "Lectures" },
+  { href: "/notes", label: "Notes" },
+  { href: "/mcqs", label: "MCQs" },
   { href: "/pricing", label: "Pricing" },
   { href: "/dashboard", label: "Dashboard" },
 ];
