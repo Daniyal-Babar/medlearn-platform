@@ -1,20 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import LectureCard from "@/components/LectureCard";
-import { categories, lectures } from "@/lib/data";
+import NotesCard from "@/components/NotesCard";
+import { notes } from "@/lib/data";
 
-export default function LecturesPage() {
+export default function NotesPage() {
   const [active, setActive] = useState<string>("All");
   const [query, setQuery] = useState("");
 
-  const filtered = lectures.filter((l) => {
-    const matchesCategory = active === "All" || l.category === active;
+  const filtered = notes.filter((l) => {
     const matchesQuery = l.title.toLowerCase().includes(query.toLowerCase());
-    return matchesCategory && matchesQuery;
+    return matchesQuery;
   });
-
-  const tabs = ["All", ...categories];
 
   return (
     <main className="bg-slate-50">
@@ -22,11 +19,10 @@ export default function LecturesPage() {
       <section className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Lecture library
+            Notes
           </h1>
           <p className="mt-3 max-w-2xl text-lg text-slate-600">
-            Browse our growing catalogue of expert-led medical lectures across
-            every core subject.
+            Browse our chapter wise notes from pharmacology book.
           </p>
 
           {/* Search */}
@@ -44,7 +40,7 @@ export default function LecturesPage() {
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search lectures..."
+                placeholder="Search notes..."
                 className="w-full rounded-xl border border-slate-300 bg-white py-2.5 pl-10 pr-4 text-sm text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
               />
             </div>
@@ -54,31 +50,17 @@ export default function LecturesPage() {
 
       {/* Filters + grid */}
       <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-        <div className="flex flex-wrap gap-2">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActive(tab)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                active === tab
-                  ? "bg-teal-600 text-white"
-                  : "border border-slate-300 bg-white text-slate-600 hover:border-slate-400"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
+        
 
         {filtered.length > 0 ? (
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {filtered.map((lecture) => (
-              <LectureCard key={lecture.id} lecture={lecture} />
+            {filtered.map((note) => (
+              <NotesCard key={note.id} Note={note} />
             ))}
           </div>
         ) : (
           <div className="mt-16 rounded-2xl border border-dashed border-slate-300 bg-white py-20 text-center">
-            <p className="text-slate-500">No lectures match your search.</p>
+            <p className="text-slate-500">No chapter match your search.</p>
           </div>
         )}
       </section>
