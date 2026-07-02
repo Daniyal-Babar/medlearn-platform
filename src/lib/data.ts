@@ -179,6 +179,67 @@ export const notes: Note[] = [
   },
 ];
 
+
+export type Mcq = {
+  id: string;
+  title: string;
+  number_of_mcqs: number;
+  students: number;
+  accent: string; // tailwind gradient classes for the cover
+  free: boolean;
+};
+
+export const mcqs: Mcq[] = [
+  {
+    id: "chapter-1",
+    title: "Chapter 1",
+    number_of_mcqs: 64,
+    students: 12450,
+    accent: "from-teal-500 to-emerald-600",
+    free: true,
+  },
+  {
+    id: "cahpter-2",
+    title: "Chapter 2",
+    number_of_mcqs: 42,
+    students: 8920,
+    accent: "from-rose-500 to-red-600",
+    free: false,
+  },
+  {
+    id: "chapter-3",
+    title: "Chapter 3",
+    number_of_mcqs: 78,
+    students: 10310,
+    accent: "from-indigo-500 to-violet-600",
+    free: false,
+  },
+  {
+    id: "chapter-4",
+    title: "Chapter 4",
+    number_of_mcqs: 55,
+    students: 7640,
+    accent: "from-amber-500 to-orange-600",
+    free: false,
+  },
+  {
+    id: "chapter-5",
+    title: "Chapter 5",
+    number_of_mcqs: 31,
+    students: 5980,
+    accent: "from-cyan-500 to-blue-600",
+    free: false,
+  },
+  {
+    id: "chapter-6",
+    title: "Chapter 6",
+    number_of_mcqs: 48,
+    students: 6720,
+    accent: "from-fuchsia-500 to-purple-600",
+    free: false,
+  },
+];
+
 export type Plan = {
   name: string;
   price: number;
