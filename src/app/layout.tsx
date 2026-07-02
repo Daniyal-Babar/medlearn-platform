@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Providers } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
         // data-scroll-behavior="smooth"
       >
         <body className="flex min-h-full flex-col bg-slate-50 text-slate-900">
+          {/* <Providers>{children}</Providers> */}
           <ScrollToTop />
           <Navbar />
           <div className="flex flex-1 flex-col">{children}</div>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 import { SignInButton, SignUpButton, UserButton, useAuth } from "@clerk/nextjs";
 
 const navLinks = [
@@ -32,9 +33,8 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
-                  active ? "text-teal-600" : "text-slate-600 hover:text-slate-900"
-                }`}
+                className={`text-sm font-medium transition-colors ${active ? "text-teal-600" : "text-slate-600 hover:text-slate-900"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -59,9 +59,12 @@ export default function Navbar() {
           ) : (
             <UserButton />
           )}
+          {/* <ThemeToggle /> */}
         </div>
 
         {/* Mobile toggle */}
+        <div>
+          <ThemeToggle />
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -77,6 +80,7 @@ export default function Navbar() {
             )}
           </svg>
         </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
