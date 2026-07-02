@@ -35,15 +35,17 @@ export default function RootLayout({
     <ClerkProvider afterSignOutUrl="/">
       <html
         lang="en"
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-        // data-scroll-behavior="smooth"
+      // data-scroll-behavior="smooth"
       >
         <body className="flex min-h-full flex-col bg-slate-50 text-slate-900">
-          {/* <Providers>{children}</Providers> */}
-          <ScrollToTop />
-          <Navbar />
-          <div className="flex flex-1 flex-col">{children}</div>
-          <Footer />
+          <Providers>
+            <ScrollToTop />
+            <Navbar />
+            <div className="flex flex-1 flex-col">{children}</div>
+            <Footer />
+          </Providers>
         </body>
       </html>
     </ClerkProvider>
