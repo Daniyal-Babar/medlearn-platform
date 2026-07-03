@@ -19,7 +19,7 @@ export default function Logo({ className = "" }: { className?: string }) {
         </svg>
       </span>
       <span className="text-lg font-bold tracking-tight text-slate-900">
-        Med<span className="text-teal-600">Learn</span>
+        <span className="text-[var(--foreground)]">Med</span><span className="text-teal-600">Learn</span>
       </span>
     </Link>
   );

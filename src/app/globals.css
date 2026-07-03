@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --header-background-color: rgba(255, 255, 255, 0.8);
-  --foreground: #0f172a;
+  --background: #ffffff;
+  --foreground: #000000;
   --brand: #0d9488;
   --brand-dark: #0f766e;
+  --blue: blue;
+
+  /* additional colors */
+  --header-background-color: rgba(255, 255, 255, 0.8);
+  --color: #0d9488;
+  --background-teal-color: #0d9488;
+  
 }
 
 /* Dark theme */
