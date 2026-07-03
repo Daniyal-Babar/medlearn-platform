@@ -5,12 +5,15 @@
   --foreground: #000000;
   --brand: #0d9488;
   --brand-dark: #0f766e;
-  --blue: blue;
 
   /* additional colors */
   --header-background-color: rgba(255, 255, 255, 0.8);
   --color: #0d9488;
   --background-teal-color: #0d9488;
+  --text-slate-600: rgb(71 85 105);
+  --text-slate-900: rgb(15 23 42);
+  --text-slate-700: rgb(51 65 85);
+  --bg-slate-100: rgb(241, 245, 249);
   
 }
 
@@ -20,6 +23,15 @@
   --foreground: #f8fafc;
   --brand: #14b8a6;
   --brand-dark: #0d9488;
+
+  /* additional colors */
+  --header-background-color: rgba(255, 255, 255, 0.8);
+  --color: #0d9488;
+  --background-teal-color: #0d9488;
+  --text-slate-600: rgb(255, 255, 255);
+  --text-slate-900: rgb(163, 169, 176);
+  --text-slate-700: rgb(255, 255, 255);
+  --bg-slate-100: rgb(0, 0, 0);
 }
 
 @theme inline {
