@@ -23,7 +23,26 @@
   --hero-bg-slate-100: rgb(241, 245, 249);
   --hero-border-slate-200: #e2e8f0;
   --hero-text-slate-500: #64748b;
+
+  /* ABOUT Section */
+  --about-background: #ffffff;
+  --about-text-slate-900: #0f172a;
+  --about-text-slate-600: #475569;
   
+  /* FEATURED LECTURES Section*/
+  --fl-bg-slate-50: #f8fafc;
+  --fl-text-slate-900: #0f172a;
+
+  /* REVIEW Section*/
+  --review-bg: #ffffff;
+  --review-text-slate-900: #0f172a;
+  --review-border-slate-200: #e2e8f0;
+  --review-bg-slate-50-50: #f8fafc8d;
+  --review-text-slate-700: #334155;
+  --review-text-slate-500: #64748b;
+  
+  /* READY TO LEARN Section */
+  --rtl-bg-slate-50: #f8fafc;
 }
 
 /* Dark theme */
@@ -46,11 +65,30 @@
   --hero-background-teal-color: #0d9488;
   --hero-text-slate-600: rgb(255, 255, 255);
   --hero-text-slate-900: rgb(255, 255, 255);
-  --hero-text-slate-900: rgb(149, 154, 161);
   --hero-text-slate-700: rgb(255, 255, 255);
   --hero-bg-slate-100: rgb(0, 0, 0);
   --hero-border-slate-200: #141515;
   --hero-text-slate-500: #a9b5c5;
+
+  /* ABOUT Section */
+  --about-background: #000000;
+  --about-text-slate-600: rgb(255, 255, 255);
+  --about-text-slate-900: rgb(255, 255, 255);
+
+  /* FEATURED LECTURES Section*/
+  --fl-bg-slate-50: #191919;
+  --fl-text-slate-900: #ffffff;
+
+  /* REVIEW Section*/
+  --review-bg: #000000;
+  --review-text-slate-900: #ffffff;
+  --review-border-slate-200: #e2e8f0;
+  --review-bg-slate-50-50: #191919;
+  --review-text-slate-700: #ededed;
+  --review-text-slate-500: #d7d8da;
+
+  /* READY TO LEARN Section */
+  --rtl-bg-slate-50: #191919;
 }
 
 @theme inline {

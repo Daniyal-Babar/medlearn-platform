@@ -51,13 +51,13 @@ export default function Home() {
           </span>
 
           {/* <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl"> */}
-          <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-[var(--text-slate-900)] sm:text-6xl">
+          <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-[var(--hero-text-slate-900)] sm:text-6xl">
             Master medicine with{" "}
             <span className="bg-gradient-to-r from-teal-600 to-emerald-500 bg-clip-text text-transparent">
               MedLearn
             </span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--text-slate-600)]">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--hero-text-slate-600)]">
             Premium medical lectures, notes and resources in one subscription.
             Learn from expert clinicians and ace your exams with confidence.
           </p>
@@ -81,8 +81,8 @@ export default function Home() {
           <dl className="mt-20 grid w-full max-w-3xl grid-cols-2 gap-8 sm:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col items-center">
-                <dt className="text-3xl font-bold text-[var(--text-slate-900)]">{stat.value}</dt>
-                <dd className="mt-1 text-sm text-[var(--text-slate-500)]">{stat.label}</dd>
+                <dt className="text-3xl font-bold text-[var(--hero-text-slate-900)]">{stat.value}</dt>
+                <dd className="mt-1 text-sm text-[var(--hero-text-slate-500)]">{stat.label}</dd>
               </div>
             ))}
           </dl>
@@ -90,14 +90,15 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="bg-white py-24">
+      {/* <section className="bg-white py-24"> */}
+      <section className="bg-[var(--about-background)] py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-base font-semibold text-teal-600">Why MedLearn</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <p className="mt-2 text-3xl font-bold tracking-tight text-[var(--about-text-slate-900)] sm:text-4xl">
               Everything you need to succeed
             </p>
-            <p className="mt-4 text-lg text-slate-600">
+            <p className="mt-4 text-lg text-[var(--about-text-slate-600)]">
               One subscription. Lectures, notes, quizzes and a community — all in
               one focused platform.
             </p>
@@ -107,7 +108,8 @@ export default function Home() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="rounded-2xl border border-slate-200 bg-slate-50/50 p-6 transition-colors hover:border-teal-200 hover:bg-teal-50/40"
+                // className="rounded-2xl border border-slate-200 bg-slate-50/50 p-6 transition-colors hover:border-teal-200 hover:bg-teal-50/40"
+                className="rounded-2xl border border-slate-200 bg-slate-50 p-6 transition-colors hover:border-teal-200 hover:bg-teal-50"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-600 text-white">
                   <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
@@ -123,12 +125,12 @@ export default function Home() {
       </section>
 
       {/* Popular lectures */}
-      <section className="bg-slate-50 py-24">
+      <section className="bg-[var(--fl-bg-slate-50)] py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
               <h2 className="text-base font-semibold text-teal-600">Popular right now</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              <p className="mt-2 text-3xl font-bold tracking-tight text-[var(--fl-text-slate-900)] sm:text-4xl">
                 Featured lectures
               </p>
             </div>
@@ -149,11 +151,11 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white py-24">
+      <section className="bg-[var(--review-bg)] py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-base font-semibold text-teal-600">Loved by learners</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <p className="mt-2 text-3xl font-bold tracking-tight text-[var(--review-text-slate-900)] sm:text-4xl">
               What our students say
             </p>
           </div>
@@ -162,7 +164,8 @@ export default function Home() {
             {testimonials.map((t) => (
               <figure
                 key={t.name}
-                className="flex flex-col rounded-2xl border border-slate-200 bg-slate-50/50 p-8"
+                // className="flex flex-col rounded-2xl border border-slate-200 bg-slate-50/50 p-8"
+                className="flex flex-col rounded-2xl border border-slate-200 bg-[var(--review-bg-slate-50-50)] p-8"
               >
                 <div className="flex gap-1 text-amber-400">
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -171,10 +174,10 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <blockquote className="mt-5 flex-1 text-slate-700">“{t.quote}”</blockquote>
-                <figcaption className="mt-6 border-t border-slate-200 pt-4">
-                  <div className="font-semibold text-slate-900">{t.name}</div>
-                  <div className="text-sm text-slate-500">{t.role}</div>
+                <blockquote className="mt-5 flex-1 text-[var(--review-text-slate-700)]">“{t.quote}”</blockquote>
+                <figcaption className="mt-6 border-t border-[var(--review-border-slate-200)] pt-4">
+                  <div className="font-semibold text-[var(--review-text-slate-900)]">{t.name}</div>
+                  <div className="text-sm text-[var(--review-text-slate-500)]">{t.role}</div>
                 </figcaption>
               </figure>
             ))}
@@ -183,7 +186,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="bg-slate-50 py-24">
+      <section className="bg-[var(--rtl-bg-slate-50)] py-24">
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-600 to-emerald-600 px-8 py-16 text-center shadow-xl sm:px-16">
             <div className="absolute inset-0 bg-grid opacity-10" />
