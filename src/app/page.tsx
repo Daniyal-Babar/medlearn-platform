@@ -50,13 +50,14 @@ export default function Home() {
             Trusted by 60,000+ medical students
           </span>
 
-          <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+          {/* <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl"> */}
+          <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-[var(--text-slate-900)] sm:text-6xl">
             Master medicine with{" "}
             <span className="bg-gradient-to-r from-teal-600 to-emerald-500 bg-clip-text text-transparent">
               MedLearn
             </span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--text-slate-600)]">
             Premium medical lectures, notes and resources in one subscription.
             Learn from expert clinicians and ace your exams with confidence.
           </p>
@@ -80,8 +81,8 @@ export default function Home() {
           <dl className="mt-20 grid w-full max-w-3xl grid-cols-2 gap-8 sm:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col items-center">
-                <dt className="text-3xl font-bold text-slate-900">{stat.value}</dt>
-                <dd className="mt-1 text-sm text-slate-500">{stat.label}</dd>
+                <dt className="text-3xl font-bold text-[var(--text-slate-900)]">{stat.value}</dt>
+                <dd className="mt-1 text-sm text-[var(--text-slate-500)]">{stat.label}</dd>
               </div>
             ))}
           </dl>
