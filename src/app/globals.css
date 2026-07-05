@@ -6,8 +6,6 @@
   
   /* NAVBAR */
   --navbar-background: #ffffff;
-  --navbar-foreground: #000000;
-  --navbar-background-teal-color: #0d9488;
   --navbar-text-slate-600: #475569;
   --navbar-text-slate-900: rgb(128, 135, 143);
   --navbar-text-slate-700: rgb(51 65 85);
@@ -43,6 +41,14 @@
   
   /* READY TO LEARN Section */
   --rtl-bg-slate-50: #f8fafc;
+
+  /* FOOTER Section*/
+  --footer-bg: #ffffff;
+  --footer-border-slate-200: #e2e8f0;
+  --footer-text-slate-600: #475569;
+  --footer-text-slate-900: #0f172a;
+  --footer-border-slate-100: #f1f5f9;
+  --footer-text-slate-500: #64748b;
 }
 
 /* Dark theme */
@@ -52,8 +58,6 @@
 
   /* NAVBAR */
   --navbar-background: #000000;
-  --navbar-foreground: #f8fafc;
-  --navbar-background-teal-color: #0d9488;
   --navbar-text-slate-600: rgb(255, 255, 255);
   --navbar-text-slate-700: rgb(255, 255, 255);
   --navbar-text-slate-900: rgb(193, 193, 193);
@@ -82,13 +86,26 @@
   /* REVIEW Section*/
   --review-bg: #000000;
   --review-text-slate-900: #ffffff;
+  --review-card-text-slate-900: #0f172a;
   --review-border-slate-200: #e2e8f0;
+  --review-bg-slate-50-50: #f8fafc;
+  --review-text-slate-700: #334155;
+  --review-text-slate-500: #64748b;
+  /* --review-border-slate-200: #e2e8f0;
   --review-bg-slate-50-50: #191919;
   --review-text-slate-700: #ededed;
-  --review-text-slate-500: #d7d8da;
+  --review-text-slate-500: #d7d8da; */
 
   /* READY TO LEARN Section */
   --rtl-bg-slate-50: #191919;
+
+  /* FOOTER Section*/
+  --footer-bg: #000000;
+  --footer-border-slate-200: #000000;
+  --footer-text-slate-600: #475569;
+  --footer-text-slate-900: #0f172a;
+  --footer-border-slate-100: #f1f5f9;
+  --footer-text-slate-500: #64748b;
 }
 
 @theme inline {

@@ -176,7 +176,7 @@ export default function Home() {
                 </div>
                 <blockquote className="mt-5 flex-1 text-[var(--review-text-slate-700)]">“{t.quote}”</blockquote>
                 <figcaption className="mt-6 border-t border-[var(--review-border-slate-200)] pt-4">
-                  <div className="font-semibold text-[var(--review-text-slate-900)]">{t.name}</div>
+                  <div className="font-semibold text-[var(--review-card-text-slate-900)]">{t.name}</div>
                   <div className="text-sm text-[var(--review-text-slate-500)]">{t.role}</div>
                 </figcaption>
               </figure>
