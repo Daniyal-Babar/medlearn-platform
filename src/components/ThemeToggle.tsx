@@ -17,7 +17,7 @@ export default function ThemeToggle() {
       onClick={() =>
         setTheme(resolvedTheme === "dark" ? "light" : "dark")
       }
-      className="rounded-lg border border-slate-300 p-2 transition hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800"
+      className="rounded-lg border border-slate-300 p-2 transition dark:border-slate-700 hover:bg-[var(--tt-hover-bg-slate-200)]"
       aria-label="Toggle theme"
     >
       {resolvedTheme === "dark" ? (

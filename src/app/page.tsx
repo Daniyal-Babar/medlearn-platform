@@ -42,7 +42,7 @@ export default function Home() {
     <main>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid opacity-60" />
+        {/* <div className="absolute inset-0 bg-grid opacity-60" /> */}
         <div className="absolute -top-24 left-1/2 -z-10 h-[480px] w-[680px] -translate-x-1/2 rounded-full bg-gradient-to-br from-teal-200/50 to-emerald-200/40 blur-3xl" />
         <div className="relative mx-auto flex max-w-7xl flex-col items-center px-6 py-24 text-center lg:px-8 lg:py-32">
           <span className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-sm font-medium text-teal-700">
