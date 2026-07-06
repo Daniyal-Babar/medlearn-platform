@@ -3,7 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
-  
+
+  /* THEME TOGGLE */
+  --tt-hover-bg-slate-200: #e0e0e0;
+
   /* NAVBAR */
   --navbar-background: #ffffff;
   --navbar-text-slate-600: #475569;
@@ -12,7 +15,7 @@
   --navbar-bg-slate-100: rgb(241, 245, 249);
   --navbar-border-slate-200: #e2e8f0;
   --navbar-text-slate-500: #64748b;
-  
+
   /* HERO Section */
   --hero-background-teal-color: #0d9488;
   --hero-text-slate-600: rgb(71 85 105);
@@ -26,7 +29,7 @@
   --about-background: #ffffff;
   --about-text-slate-900: #0f172a;
   --about-text-slate-600: #475569;
-  
+
   /* FEATURED LECTURES Section*/
   --fl-bg-slate-50: #f8fafc;
   --fl-text-slate-900: #0f172a;
@@ -38,7 +41,7 @@
   --review-bg-slate-50-50: #f8fafc8d;
   --review-text-slate-700: #334155;
   --review-text-slate-500: #64748b;
-  
+
   /* READY TO LEARN Section */
   --rtl-bg-slate-50: #f8fafc;
 
@@ -55,6 +58,9 @@
 .dark {
   --background: #020617;
   --foreground: #f8fafc;
+
+  /* THEME TOGGLE */
+  --tt-hover-bg-slate-200: #191919;
 
   /* NAVBAR */
   --navbar-background: #000000;
@@ -118,6 +124,18 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -125,18 +143,19 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  /* font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif; */
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Grid background */
-.bg-grid {
+/* .bg-grid {
   background-image:
     linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
   background-size: 40px 40px;
-}
+} */
 
 /* Dark grid */
 .dark .bg-grid {
