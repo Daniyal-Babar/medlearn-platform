@@ -51,13 +51,13 @@ export default function Home() {
           </span>
 
           {/* <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl"> */}
-          <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-[var(--hero-text-slate-900)] sm:text-6xl">
+          <h1 className="mt-6 max-w-4xl text-[2.1rem] font-bold tracking-tight text-[var(--hero-text-slate-900)] sm:text-5xl">
             Master medicine with{" "}
             <span className="bg-gradient-to-r from-teal-600 to-emerald-500 bg-clip-text text-transparent">
               MedLearn
             </span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--hero-text-slate-600)]">
+          <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--hero-text-slate-600)]">
             Premium medical lectures, notes and resources in one subscription.
             Learn from expert clinicians and ace your exams with confidence.
           </p>
@@ -65,13 +65,13 @@ export default function Home() {
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
             <Link
               href="/sign-up"
-              className="rounded-xl bg-teal-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-teal-600/20 transition-all hover:-translate-y-0.5 hover:bg-teal-700"
+              className="rounded-xl bg-teal-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-teal-600/20 transition-all hover:-translate-y-0.5 hover:bg-teal-700"
             >
               Start learning today
             </Link>
             <Link
               href="/lectures"
-              className="rounded-xl border border-slate-300 bg-white px-7 py-3.5 text-base font-semibold text-slate-800 transition-colors hover:border-slate-400"
+              className="rounded-xl border border-slate-300 bg-white px-7 py-3.5 text-sm font-semibold text-slate-800 transition-colors hover:border-slate-400"
             >
               Browse lectures
             </Link>
@@ -95,10 +95,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-base font-semibold text-teal-600">Why MedLearn</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-[var(--about-text-slate-900)] sm:text-4xl">
+            <p className="mt-2 text-3xl font-bold tracking-tight text-[var(--about-text-slate-900)] sm:text-[2.1rem]">
               Everything you need to succeed
             </p>
-            <p className="mt-4 text-lg text-[var(--about-text-slate-600)]">
+            <p className="mt-4 text-base text-[var(--about-text-slate-600)]">
               One subscription. Lectures, notes, quizzes and a community — all in
               one focused platform.
             </p>
@@ -116,7 +116,7 @@ export default function Home() {
                     {feature.icon}
                   </svg>
                 </div>
-                <h3 className="mt-5 text-lg font-semibold text-slate-900">{feature.title}</h3>
+                <h3 className="mt-5 text-base font-semibold text-slate-900">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-600">{feature.description}</p>
               </div>
             ))}
@@ -130,13 +130,13 @@ export default function Home() {
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
               <h2 className="text-base font-semibold text-teal-600">Popular right now</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-[var(--fl-text-slate-900)] sm:text-4xl">
+              <p className="mt-2 text-3xl font-bold tracking-tight text-[var(--fl-text-slate-900)] sm:text-[2.1rem]">
                 Featured lectures
               </p>
             </div>
             <Link
               href="/lectures"
-              className="text-sm font-semibold text-teal-600 transition-colors hover:text-teal-700"
+              className="text-base font-semibold text-teal-600 transition-colors hover:text-teal-700"
             >
               View all lectures →
             </Link>
@@ -155,7 +155,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-base font-semibold text-teal-600">Loved by learners</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-[var(--review-text-slate-900)] sm:text-4xl">
+            <p className="mt-2 text-3xl font-bold tracking-tight text-[var(--review-text-slate-900)] sm:text-[2.1rem]">
               What our students say
             </p>
           </div>
@@ -191,23 +191,23 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-600 to-emerald-600 px-8 py-16 text-center shadow-xl sm:px-16">
             <div className="absolute inset-0 bg-grid opacity-10" />
             <div className="relative">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-[2.1rem]">
                 Ready to start learning?
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-teal-50">
+              <p className="mx-auto mt-4 max-w-2xl text-base text-teal-50">
                 Join thousands of medical students and professionals. Start free,
                 upgrade whenever you&apos;re ready.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
                   href="/sign-up"
-                  className="rounded-xl bg-white px-7 py-3.5 text-base font-semibold text-teal-700 shadow-sm transition-transform hover:-translate-y-0.5"
+                  className="rounded-xl bg-white px-7 py-3.5 text-sm font-semibold text-teal-700 shadow-sm transition-transform hover:-translate-y-0.5"
                 >
                   Create free account
                 </Link>
                 <Link
                   href="/pricing"
-                  className="rounded-xl border border-white/40 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
+                  className="rounded-xl border border-white/40 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
                 >
                   See pricing
                 </Link>
