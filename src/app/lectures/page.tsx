@@ -17,17 +17,13 @@ export default function LecturesPage() {
   const tabs = ["All", ...categories];
 
   return (
-    // <main className="bg-slate-50">
     <main className="bg-[var(--lecture-bg-slate-50)]">
       {/* Header */}
-      {/* <section className="border-b border-slate-200 bg-white"> */}
       <section className="border-b border-[var(--lecture-border-slate-200)] bg-[var(--lecture-bg)]">
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
-          {/* <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"> */}
           <h1 className="text-3xl font-bold tracking-tight text-[var(--lecture-text-slate-900)] sm:text-4xl">
             Lecture library
           </h1>
-          {/* <p className="mt-3 max-w-2xl text-lg text-slate-600"> */}
           <p className="mt-3 max-w-2xl text-lg text-[var(--lecture-text-slate-600)]">
             Browse our growing catalogue of expert-led medical lectures across
             every core subject.
@@ -37,7 +33,6 @@ export default function LecturesPage() {
           <div className="mt-8 max-w-md">
             <div className="relative">
               <svg
-                // className="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
                 className="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-[var(--lecture-text-slate-400)]"
                 fill="none"
                 stroke="currentColor"
@@ -50,7 +45,6 @@ export default function LecturesPage() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search lectures..."
-                // className="w-full rounded-xl border border-slate-300 bg-white py-2.5 pl-10 pr-4 text-sm text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
                 className="w-full rounded-xl border border-[var(--lecture-border-slate-300)] bg-[var(--lecture-bg)] py-2.5 pl-10 pr-4 text-sm text-[var(--lecture-text-slate-900)] outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
               />
             </div>
@@ -70,11 +64,6 @@ export default function LecturesPage() {
                   ? "bg-teal-600 text-[var(--lecture-text)]"
                   : "border border-[var(--lecture-border-slate-300)] bg-[var(--lecture-bg)] text-[var(--lecture-text-slate-400)] hover:border-[var(--lecture-border-slate-400)]"
               }`}
-              // className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-              //   active === tab
-              //     ? "bg-teal-600 text-white"
-              //     : "border border-slate-300 bg-white text-slate-600 hover:border-slate-400"
-              // }`}
             >
               {tab}
             </button>
@@ -88,7 +77,6 @@ export default function LecturesPage() {
             ))}
           </div>
         ) : (
-          // <div className="mt-16 rounded-2xl border border-dashed border-slate-300 bg-white py-20 text-center">
           <div className="mt-16 rounded-2xl border border-dashed border-[var(--lecture-border-slate-300)] bg-[var(--lecture-bg)] py-20 text-center">
             <p className="text-[var(--lecture-text-slate-500)]">No lectures match your search.</p>
           </div>

@@ -63,6 +63,17 @@
   --lecture-border-slate-300: #cbd5e1;
   --lecture-text-slate-500: #94a3b8;
   --lecture-text: #ffffff;
+
+  /* NOTES Page*/
+  --note-bg-slate-50: #f8fafc;
+  --note-border-slate-200: #e2e8f0;
+  --note-bg: #ffffff;
+  --note-text-slate-900: #0f172a;
+  --note-text-slate-600: #475569;
+  --note-text-slate-400: #94a3b8;
+  --note-border-slate-300: #cbd5e1;
+  --note-text-slate-500: #94a3b8;
+  --note-text: #ffffff;
 }
 
 /* Dark theme */
@@ -134,6 +145,17 @@
   --lecture-border-slate-300: #f1f5f9;
   --lecture-text-slate-500: #64748b;
   --lecture-text: #000000;
+
+  /* NOTES Page*/
+  --note-bg: #000000;
+  --note-bg-slate-50: #0a0a0a;
+  --note-border-slate-200: #000000;
+  --note-text-slate-900: #ffffff;
+  --note-text-slate-600: #b8c2d1;
+  --note-text-slate-400: #94a3b8;
+  --note-border-slate-300: #f1f5f9;
+  --note-text-slate-500: #64748b;
+  --note-text: #000000;
 }
 
 @theme inline {
