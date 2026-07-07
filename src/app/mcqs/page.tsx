@@ -15,14 +15,14 @@ export default function McqsPage() {
 
 
   return (
-    <main className="bg-slate-50">
+    <main className="bg-[var(--mcq-bg-slate-50)]">
       {/* Header */}
-      <section className="border-b border-slate-200 bg-white">
+      <section className="border-b border-[var(--mcq-border-slate-200)] bg-[var(--mcq-bg)]">
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h1 className="text-3xl font-bold tracking-tight text-[var(--mcq-text-slate-900)] sm:text-4xl">
             MCQs
           </h1>
-          <p className="mt-3 max-w-2xl text-lg text-slate-600">
+          <p className="mt-3 max-w-2xl text-lg text-[var(--mcq-text-slate-600)]">
             Browse our chapter wise MCQs from pharmacology book.
           </p>
 
@@ -30,7 +30,7 @@ export default function McqsPage() {
           <div className="mt-8 max-w-md">
             <div className="relative">
               <svg
-                className="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
+                className="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-[var(--mcq-text-slate-400)]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -42,7 +42,7 @@ export default function McqsPage() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search MCQs..."
-                className="w-full rounded-xl border border-slate-300 bg-white py-2.5 pl-10 pr-4 text-sm text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
+                className="w-full rounded-xl border border-[var(--mcq-border-slate-300)] bg-[var(--mcq-bg)] py-2.5 pl-10 pr-4 text-sm text-[var(--mcq-text-slate-900)] outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
               />
             </div>
           </div>
@@ -53,14 +53,14 @@ export default function McqsPage() {
       <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
 
         {filtered.length > 0 ? (
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((mcq) => (
               <McqsCard key={mcq.id} Mcq={mcq} />
             ))}
           </div>
         ) : (
-          <div className="mt-16 rounded-2xl border border-dashed border-slate-300 bg-white py-20 text-center">
-            <p className="text-slate-500">No MCQs match your search.</p>
+          <div className="mt-16 rounded-2xl border border-dashed border-[var(--mcq-border-slate-300)] bg-[var(--mcq-bg)] py-20 text-center">
+            <p className="text-[var(--mcq-text-slate-500)]">No MCQs match your search.</p>
           </div>
         )}
       </section>

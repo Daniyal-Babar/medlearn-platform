@@ -74,6 +74,17 @@
   --note-border-slate-300: #cbd5e1;
   --note-text-slate-500: #94a3b8;
   --note-text: #ffffff;
+
+  /* MCQS Page*/
+  --mcq-bg-slate-50: #f8fafc;
+  --mcq-border-slate-200: #e2e8f0;
+  --mcq-bg: #ffffff;
+  --mcq-text-slate-900: #0f172a;
+  --mcq-text-slate-600: #475569;
+  --mcq-text-slate-400: #94a3b8;
+  --mcq-border-slate-300: #cbd5e1;
+  --mcq-text-slate-500: #94a3b8;
+  --mcq-text: #ffffff;
 }
 
 /* Dark theme */
@@ -156,6 +167,17 @@
   --note-border-slate-300: #f1f5f9;
   --note-text-slate-500: #64748b;
   --note-text: #000000;
+
+  /* MCQS Page*/
+  --mcq-bg: #000000;
+  --mcq-bg-slate-50: #0a0a0a;
+  --mcq-border-slate-200: #000000;
+  --mcq-text-slate-900: #ffffff;
+  --mcq-text-slate-600: #b8c2d1;
+  --mcq-text-slate-400: #94a3b8;
+  --mcq-border-slate-300: #f1f5f9;
+  --mcq-text-slate-500: #64748b;
+  --mcq-text: #000000;
 }
 
 @theme inline {
