@@ -52,6 +52,17 @@
   --footer-text-slate-900: #0f172a;
   --footer-border-slate-100: #f1f5f9;
   --footer-text-slate-500: #64748b;
+
+  /* LECTURES Page*/
+  --lecture-bg-slate-50: #f8fafc;
+  --lecture-border-slate-200: #e2e8f0;
+  --lecture-bg: #ffffff;
+  --lecture-text-slate-900: #0f172a;
+  --lecture-text-slate-600: #475569;
+  --lecture-text-slate-400: #94a3b8;
+  --lecture-border-slate-300: #cbd5e1;
+  --lecture-text-slate-500: #94a3b8;
+  --lecture-text: #ffffff;
 }
 
 /* Dark theme */
@@ -86,7 +97,7 @@
   --about-text-slate-900: rgb(255, 255, 255);
 
   /* FEATURED LECTURES Section*/
-  --fl-bg-slate-50: #191919;
+  --fl-bg-slate-50: #0a0a0a;
   --fl-text-slate-900: #ffffff;
 
   /* REVIEW Section*/
@@ -103,7 +114,7 @@
   --review-text-slate-500: #d7d8da; */
 
   /* READY TO LEARN Section */
-  --rtl-bg-slate-50: #191919;
+  --rtl-bg-slate-50: #0a0a0a;
 
   /* FOOTER Section*/
   --footer-bg: #000000;
@@ -112,6 +123,17 @@
   --footer-text-slate-900: #0f172a;
   --footer-border-slate-100: #f1f5f9;
   --footer-text-slate-500: #64748b;
+
+  /* LECTURES Page*/
+  --lecture-bg: #000000;
+  --lecture-bg-slate-50: #0a0a0a;
+  --lecture-border-slate-200: #000000;
+  --lecture-text-slate-900: #ffffff;
+  --lecture-text-slate-600: #b8c2d1;
+  --lecture-text-slate-400: #94a3b8;
+  --lecture-border-slate-300: #f1f5f9;
+  --lecture-text-slate-500: #64748b;
+  --lecture-text: #000000;
 }
 
 @theme inline {
