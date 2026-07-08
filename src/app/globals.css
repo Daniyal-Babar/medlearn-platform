@@ -29,6 +29,11 @@
   --about-background: #ffffff;
   --about-text-slate-900: #0f172a;
   --about-text-slate-600: #475569;
+  --about-border-slate-200: #e2e8f0;
+  --about-bg-slate-50: #f8fafc;
+  --about-bg-slate-50-50: #f8fafc8d;
+  --about-text: #ffffff;
+  --about-bg-teal-50: #f0fdfa;
 
   /* FEATURED LECTURES Section*/
   --fl-bg-slate-50: #f8fafc;
@@ -128,7 +133,12 @@
   /* ABOUT Section */
   --about-background: #000000;
   --about-text-slate-600: rgb(255, 255, 255);
-  --about-text-slate-900: rgb(255, 255, 255);
+  --about-text-slate-900: rgb(229, 229, 229);
+  --about-border-slate-200: #141515;
+  --about-bg-slate-50: #0a0a0a;
+  --about-bg-slate-50-50: #f8fafc;
+  --about-text: #000000;
+  --about-bg-teal-50: #222b29;
 
   /* FEATURED LECTURES Section*/
   --fl-bg-slate-50: #0a0a0a;
@@ -152,7 +162,7 @@
 
   /* FOOTER Section*/
   --footer-bg: #000000;
-  --footer-border-slate-200: #000000;
+  --footer-border-slate-200: #141515;
   --footer-text-slate-600: #475569;
   --footer-text-slate-900: #0f172a;
   --footer-border-slate-100: #f1f5f9;

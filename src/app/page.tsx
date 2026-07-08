@@ -109,15 +109,18 @@ export default function Home() {
               <div
                 key={feature.title}
                 // className="rounded-2xl border border-slate-200 bg-slate-50/50 p-6 transition-colors hover:border-teal-200 hover:bg-teal-50/40"
-                className="rounded-2xl border border-slate-200 bg-slate-50 p-6 transition-colors hover:border-teal-200 hover:bg-teal-50"
+                className="rounded-2xl border border-[var(--about-border-slate-200)] bg-[var(--about-bg-slate-50)] p-6 transition-colors hover:border-teal-200 hover:bg-[var(--about-bg-teal-50)]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-600 text-white">
+                {/* <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-600 text-white"> */}
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-600 text-[var(--about-text)]">
                   <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                     {feature.icon}
                   </svg>
                 </div>
-                <h3 className="mt-5 text-base font-semibold text-slate-900">{feature.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{feature.description}</p>
+                <h3 className="mt-5 text-base font-semibold text-[var(--about-text-slate-900)]">{feature.title}</h3>
+                {/* <h3 className="mt-5 text-base font-semibold text-slate-900">{feature.title}</h3> */}
+                <p className="mt-2 text-sm leading-6 text-[var(--about-text-slate-600)]">{feature.description}</p>
+                {/* <p className="mt-2 text-sm leading-6 text-slate-600">{feature.description}</p> */}
               </div>
             ))}
           </div>
