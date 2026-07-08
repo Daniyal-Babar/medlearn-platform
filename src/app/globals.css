@@ -85,6 +85,18 @@
   --mcq-border-slate-300: #cbd5e1;
   --mcq-text-slate-500: #94a3b8;
   --mcq-text: #ffffff;
+
+  /* PRICING Page*/
+  --pricing-bg-slate-50: #f8fafc;
+  --pricing-bg-slate-50-50: #f8fafc8d;
+  --pricing-border-slate-200: #e2e8f0;
+  --pricing-bg: #ffffff;
+  --pricing-text-slate-900: #0f172a;
+  --pricing-text-slate-600: #475569;
+  --pricing-text-slate-400: #94a3b8;
+  --pricing-border-slate-300: #cbd5e1;  
+  --pricing-text-slate-500: #64748b;  
+  --pricing-text: #ffffff;
 }
 
 /* Dark theme */
@@ -178,6 +190,18 @@
   --mcq-border-slate-300: #f1f5f9;
   --mcq-text-slate-500: #64748b;
   --mcq-text: #000000;
+
+  /* PRICING Page*/
+  --pricing-bg: #000000;
+  --pricing-bg-slate-50: #0a0a0a;
+  --pricing-bg-slate-50-50: #191919;
+  --pricing-border-slate-200: #000000;
+  --pricing-text-slate-900: #ffffff;
+  --pricing-text-slate-600: #b8c2d1;
+  --pricing-text-slate-400: #94a3b8;
+  --pricing-border-slate-300: #f1f5f9;
+  --pricing-text-slate-500: #aebaca;
+  --pricing-text: #000000;
 }
 
 @theme inline {

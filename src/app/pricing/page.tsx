@@ -30,15 +30,15 @@ function CheckIcon() {
 
 export default function PricingPage() {
   return (
-    <main className="bg-slate-50">
+    <main className="bg-[var(--pricing-bg-slate-50)]">
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-slate-200 bg-white">
+      <section className="relative overflow-hidden border-b border-[var(--pricing-border-slate-200)] bg-[var(--pricing-bg)]">
         <div className="absolute inset-0 bg-grid opacity-50" />
         <div className="relative mx-auto max-w-3xl px-6 py-20 text-center lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-[var(--pricing-text-slate-900)] sm:text-5xl">
             Simple, transparent pricing
           </h1>
-          <p className="mt-4 text-lg text-slate-600">
+          <p className="mt-4 text-lg text-[var(--pricing-text-slate-600)]">
             Start free and upgrade when you&apos;re ready. No hidden fees, cancel anytime.
           </p>
         </div>
@@ -50,34 +50,34 @@ export default function PricingPage() {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative flex flex-col rounded-3xl border bg-white p-8 ${
+              className={`relative flex flex-col rounded-3xl border bg-[var(--pricing-bg)] p-8 ${
                 plan.highlighted
                   ? "border-teal-500 shadow-xl shadow-teal-600/10 ring-1 ring-teal-500"
-                  : "border-slate-200 shadow-sm"
+                  : "border-[var(--pricing-border-slate-200)] shadow-sm"
               }`}
             >
               {plan.highlighted && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-teal-600 px-4 py-1 text-xs font-semibold text-white">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-teal-600 px-4 py-1 text-xs font-semibold text-[var(--pricing-text)]">
                   Most popular
                 </span>
               )}
 
-              <h3 className="text-lg font-semibold text-slate-900">{plan.name}</h3>
-              <p className="mt-2 text-sm text-slate-500">{plan.tagline}</p>
+              <h3 className="text-lg font-semibold text-[var(--pricing-text-slate-900)]">{plan.name}</h3>
+              <p className="mt-2 text-sm text-[var(--pricing-text-slate-500)]">{plan.tagline}</p>
 
               <div className="mt-6 flex items-baseline gap-1">
-                <span className="text-4xl font-bold tracking-tight text-slate-900">
+                <span className="text-4xl font-bold tracking-tight text-[var(--pricing-text-slate-900)]">
                   ${plan.price}
                 </span>
-                <span className="text-sm text-slate-500">/ {plan.period}</span>
+                <span className="text-sm text-[var(--pricing-text-slate-500)]">/ {plan.period}</span>
               </div>
 
               <Link
                 href="/sign-up"
                 className={`mt-6 rounded-xl px-4 py-3 text-center text-sm font-semibold transition-colors ${
                   plan.highlighted
-                    ? "bg-teal-600 text-white hover:bg-teal-700"
-                    : "border border-slate-300 text-slate-800 hover:border-slate-400"
+                    ? "bg-teal-600 text-[var(--pricing-text)] hover:bg-teal-700"
+                    : "border border-[var(--pricing-border-slate-300)] text-[var(--pricing-text-slate-900)] hover:border-[var(--pricing-border-slate-400)]"
                 }`}
               >
                 {plan.cta}
@@ -85,7 +85,7 @@ export default function PricingPage() {
 
               <ul className="mt-8 space-y-3">
                 {plan.features.map((feature) => (
-                  <li key={feature} className="flex gap-3 text-sm text-slate-600">
+                  <li key={feature} className="flex gap-3 text-sm text-[var(--pricing-text-slate-600)]">
                     <CheckIcon />
                     {feature}
                   </li>
@@ -97,16 +97,16 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-20">
+      <section className="bg-[var(--pricing-bg)] py-20">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-slate-900">
+          <h2 className="text-center text-3xl font-bold tracking-tight text-[var(--pricing-text-slate-900)]">
             Frequently asked questions
           </h2>
           <dl className="mt-12 space-y-6">
             {faqs.map((faq) => (
-              <div key={faq.q} className="rounded-2xl border border-slate-200 bg-slate-50/50 p-6">
-                <dt className="font-semibold text-slate-900">{faq.q}</dt>
-                <dd className="mt-2 text-sm leading-6 text-slate-600">{faq.a}</dd>
+              <div key={faq.q} className="rounded-2xl border border-[var(--pricing-border-slate-200)] bg-[var(--pricing-bg-slate-50-50)] p-6">
+                <dt className="font-semibold text-[var(--pricing-text-slate-900)]">{faq.q}</dt>
+                <dd className="mt-2 text-sm leading-6 text-[var(--pricing-text-slate-600)]">{faq.a}</dd>
               </div>
             ))}
           </dl>
