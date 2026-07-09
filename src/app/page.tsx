@@ -109,7 +109,7 @@ export default function Home() {
               <div
                 key={feature.title}
                 // className="rounded-2xl border border-slate-200 bg-slate-50/50 p-6 transition-colors hover:border-teal-200 hover:bg-teal-50/40"
-                className="rounded-2xl border border-[var(--about-border-slate-200)] bg-[var(--about-bg-slate-50)] p-6 transition-colors hover:border-teal-200 hover:bg-[var(--about-bg-teal-50)]"
+                className="rounded-2xl border border-[var(--about-border-slate-200)] bg-[var(--about-bg-slate-50)] p-6 transition-colors hover:border-teal-200 hover:bg-[var(--about-bg-teal-50)] shadow-[0px_0px_10px_rgba(255,255,255,0.5)] shadow-2xl"
               >
                 {/* <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-600 text-white"> */}
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-600 text-[var(--about-text)]">
@@ -168,7 +168,7 @@ export default function Home() {
               <figure
                 key={t.name}
                 // className="flex flex-col rounded-2xl border border-slate-200 bg-slate-50/50 p-8"
-                className="flex flex-col rounded-2xl border border-slate-200 bg-[var(--review-bg-slate-50-50)] p-8"
+                className="flex flex-col rounded-2xl border border-slate-200 bg-[var(--review-bg-slate-50-50)] p-8 shadow-[0px_0px_10px_rgba(255,255,255,0.25)] shadow-2xl"
               >
                 <div className="flex gap-1 text-amber-400">
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -191,7 +191,7 @@ export default function Home() {
       {/* CTA */}
       <section className="bg-[var(--rtl-bg-slate-50)] py-24">
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-600 to-emerald-600 px-8 py-16 text-center shadow-xl sm:px-16">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-600 to-emerald-600 px-8 py-16 text-center shadow-2xl sm:px-16">
             <div className="absolute inset-0 bg-grid opacity-10" />
             <div className="relative">
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-[2.1rem]">

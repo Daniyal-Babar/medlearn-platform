@@ -4,7 +4,7 @@ import type { Lecture } from "@/lib/data";
 export default function LectureCard({ lecture }: { lecture: Lecture }) {
   return (
     // <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--lc-border-slate-200)] bg-[var(--lc-bg)] shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+    <div className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--lc-border-slate-200)] bg-[var(--lc-bg)] shadow-2xl shadow-[0px_0px_10px_rgba(255,255,255,0.25)] transition-all hover:-translate-y-1">
       {/* Cover */}
       <div className={`relative h-40 bg-gradient-to-br ${lecture.accent}`}>
         <div className="absolute inset-0 bg-grid opacity-20" />

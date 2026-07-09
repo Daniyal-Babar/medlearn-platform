@@ -177,15 +177,16 @@
   /* REVIEW Section*/
   --review-bg: #000000;
   --review-text-slate-900: #ffffff;
-  --review-card-text-slate-900: #0f172a;
+  --review-card-text-slate-900: #ffffff;
   --review-border-slate-200: #e2e8f0;
   --review-bg-slate-50-50: #f8fafc;
   --review-text-slate-700: #334155;
   --review-text-slate-500: #64748b;
-  /* --review-border-slate-200: #e2e8f0;
+
+  --review-border-slate-200: #e2e8f0;
   --review-bg-slate-50-50: #191919;
   --review-text-slate-700: #ededed;
-  --review-text-slate-500: #d7d8da; */
+  --review-text-slate-500: #d7d8da;
 
   /* READY TO LEARN Section */
   --rtl-bg-slate-50: #0a0a0a;
