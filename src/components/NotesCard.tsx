@@ -3,7 +3,8 @@ import type { Note } from "@/lib/data";
 
 export default function NoteCard({ Note }: { Note: Note }) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+    // <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+    <div className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--nc-border-slate-200)] bg-[var(--nc-bg)] shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
       {/* Cover */}
       <div className={`relative h-40 bg-gradient-to-br ${Note.accent}`}>
         <div className="absolute inset-0 bg-grid opacity-20" />
@@ -19,11 +20,13 @@ export default function NoteCard({ Note }: { Note: Note }) {
       {/* Body */}
       <div className="flex flex-1 flex-col p-5">
 
-        <h3 className="mt-3 text-lg font-semibold leading-snug text-slate-900">
+        {/* <h3 className="mt-3 text-lg font-semibold leading-snug text-slate-900"> */}
+        <h3 className="mt-3 text-lg font-semibold leading-snug text-[var(--nc-text-slate-900)]">
           {Note.title}
         </h3>
 
-        <div className="mt-4 flex items-center gap-4 text-xs text-slate-500">
+        {/* <div className="mt-4 flex items-center gap-4 text-xs text-slate-500"> */}
+        <div className="mt-4 flex items-center gap-4 text-xs text-[var(--nc-text-slate-500)]">
           <span className="flex items-center gap-1">
             <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="9" />
@@ -39,8 +42,10 @@ export default function NoteCard({ Note }: { Note: Note }) {
           </span>
         </div>
 
-        <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-          <span className="text-xs text-slate-500">
+        {/* <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4"> */}
+        <div className="mt-5 flex items-center justify-between border-t border-[var(--nc-border-slate-100)] pt-4">
+          {/* <span className="text-xs text-slate-500"> */}
+          <span className="text-xs text-[var(--nc-text-slate-500)]">
             {Note.students.toLocaleString()} enrolled
           </span>
           <Link

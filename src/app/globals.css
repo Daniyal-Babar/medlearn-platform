@@ -118,6 +118,20 @@
   --lc-level-text-slate-500: #64748b;
   --lc-bg-emerald-500: #10b981;
   --lc-text: #ffffff;
+
+  /* NOTES CARD */
+  --nc-border-slate-100: #f1f5f9;
+  --nc-border-slate-200: #e2e8f0;
+  --nc-bg: #ffffff;
+  --nc-text-slate-900: #0f172a;
+  --nc-text-slate-500: #64748b;
+
+  /* MCQS CARD */
+  --mc-border-slate-100: #f1f5f9;
+  --mc-border-slate-200: #e2e8f0;
+  --mc-bg: #ffffff;
+  --mc-text-slate-900: #0f172a;
+  --mc-text-slate-500: #64748b;
 }
 
 /* Dark theme */
@@ -244,6 +258,20 @@
   --lc-level-text-slate-500: #64748b;
   --lc-bg-emerald-500: #00b579;
   --lc-text: #000000;
+
+  /* NOTES CARD */
+  --nc-bg: #000000;
+  --nc-border-slate-100: #000000;
+  --nc-border-slate-200: #000000;
+  --nc-text-slate-900: #ffffff;
+  --nc-text-slate-500: #aebaca;
+
+  /* MCQS CARD */
+  --mc-bg: #000000;
+  --mc-border-slate-100: #000000;
+  --mc-border-slate-200: #000000;
+  --mc-text-slate-900: #ffffff;
+  --mc-text-slate-500: #aebaca;
 }
 
 @theme inline {
