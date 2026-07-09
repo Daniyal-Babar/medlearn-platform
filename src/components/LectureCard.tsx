@@ -3,12 +3,16 @@ import type { Lecture } from "@/lib/data";
 
 export default function LectureCard({ lecture }: { lecture: Lecture }) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+    // <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+    <div className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--lc-border-slate-200)] bg-[var(--lc-bg)] shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
       {/* Cover */}
       <div className={`relative h-40 bg-gradient-to-br ${lecture.accent}`}>
         <div className="absolute inset-0 bg-grid opacity-20" />
         <div className="absolute left-4 top-4 flex gap-2">
-          <span className="rounded-full bg-white/90 px-2.5 py-1 text-xs font-semibold text-slate-700 backdrop-blur">
+          {/* <span className="rounded-full bg-white/90 px-2.5 py-1 text-xs font-semibold text-slate-700 backdrop-blur">
+            {lecture.category}
+          </span> */}
+          <span className="rounded-full bg-[var(--lc-bg)] px-2.5 py-1 text-xs font-semibold text-[var(--lc-text-slate-700)] backdrop-blur">
             {lecture.category}
           </span>
           {lecture.free && (
@@ -17,7 +21,8 @@ export default function LectureCard({ lecture }: { lecture: Lecture }) {
             </span>
           )}
         </div>
-        <div className="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/95 text-teal-600 shadow-md transition-transform group-hover:scale-110">
+        {/* <div className="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/95 text-teal-600 shadow-md transition-transform group-hover:scale-110"> */}
+        <div className="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--lc-bg)] text-teal-600 shadow-md transition-transform group-hover:scale-110">
           <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M8 5v14l11-7z" />
           </svg>
@@ -26,7 +31,8 @@ export default function LectureCard({ lecture }: { lecture: Lecture }) {
 
       {/* Body */}
       <div className="flex flex-1 flex-col p-5">
-        <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
+        {/* <div className="flex items-center gap-2 text-xs font-medium text-slate-500"> */}
+        <div className="flex items-center gap-2 text-xs font-medium text-[var(--lc-level-text-slate-500)]">
           <span className="rounded bg-slate-100 px-2 py-0.5">{lecture.level}</span>
           <span className="flex items-center gap-1 text-amber-500">
             <svg className="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -36,12 +42,17 @@ export default function LectureCard({ lecture }: { lecture: Lecture }) {
           </span>
         </div>
 
-        <h3 className="mt-3 text-lg font-semibold leading-snug text-slate-900">
+        {/* <h3 className="mt-3 text-lg font-semibold leading-snug text-slate-900">
+          {lecture.title}
+        </h3> */}
+        <h3 className="mt-3 text-lg font-semibold leading-snug text-[var(--lc-text-slate-900)]">
           {lecture.title}
         </h3>
-        <p className="mt-1 text-sm text-slate-500">{lecture.instructor}</p>
+        {/* <p className="mt-1 text-sm text-slate-500">{lecture.instructor}</p> */}
+        <p className="mt-1 text-sm text-[var(--lc-text-slate-500)]">{lecture.instructor}</p>
 
-        <div className="mt-4 flex items-center gap-4 text-xs text-slate-500">
+        {/* <div className="mt-4 flex items-center gap-4 text-xs text-slate-500"> */}
+        <div className="mt-4 flex items-center gap-4 text-xs text-[var(--lc-text-slate-500)]">
           <span className="flex items-center gap-1">
             <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="9" />
@@ -57,8 +68,10 @@ export default function LectureCard({ lecture }: { lecture: Lecture }) {
           </span>
         </div>
 
-        <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-          <span className="text-xs text-slate-500">
+        {/* <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4"> */}
+        <div className="mt-5 flex items-center justify-between border-t border-[var(--lc-border-slate-100)] pt-4">
+          {/* <span className="text-xs text-slate-500"> */}
+          <span className="text-xs text-[var(--lc-text-slate-500)]">
             {lecture.students.toLocaleString()} enrolled
           </span>
           <Link

@@ -99,9 +99,25 @@
   --pricing-text-slate-900: #0f172a;
   --pricing-text-slate-600: #475569;
   --pricing-text-slate-400: #94a3b8;
-  --pricing-border-slate-300: #cbd5e1;  
-  --pricing-text-slate-500: #64748b;  
+  --pricing-border-slate-300: #cbd5e1;
+  --pricing-text-slate-500: #64748b;
   --pricing-text: #ffffff;
+
+  /* LECTURE CARD */
+  --lc-bg-slate-50: #f8fafc;
+  --lc-bg-slate-50-50: #f8fafc8d;
+  --lc-border-slate-100: #f1f5f9;
+  --lc-border-slate-200: #e2e8f0;
+  --lc-bg: #ffffff;
+  --lc-text-slate-900: #0f172a;
+  --lc-text-slate-700: #334155;
+  --lc-text-slate-600: #475569;
+  --lc-text-slate-400: #94a3b8;
+  --lc-border-slate-300: #cbd5e1;
+  --lc-text-slate-500: #64748b;
+  --lc-level-text-slate-500: #64748b;
+  --lc-bg-emerald-500: #10b981;
+  --lc-text: #ffffff;
 }
 
 /* Dark theme */
@@ -201,7 +217,7 @@
   --mcq-text-slate-500: #64748b;
   --mcq-text: #000000;
 
-  /* PRICING Page*/
+  /* PRICING Page */
   --pricing-bg: #000000;
   --pricing-bg-slate-50: #0a0a0a;
   --pricing-bg-slate-50-50: #191919;
@@ -212,6 +228,22 @@
   --pricing-border-slate-300: #f1f5f9;
   --pricing-text-slate-500: #aebaca;
   --pricing-text: #000000;
+
+  /* LECTURE CARD */
+  --lc-bg: #000000;
+  --lc-bg-slate-50: #0a0a0a;
+  --lc-bg-slate-50-50: #191919;
+  --lc-border-slate-100: #000000;
+  --lc-border-slate-200: #000000;
+  --lc-text-slate-900: #ffffff;
+  --lc-text-slate-700: #b8c2d1;
+  --lc-text-slate-600: #b8c2d1;
+  --lc-text-slate-400: #94a3b8;
+  --lc-border-slate-300: #f1f5f9;
+  --lc-text-slate-500: #aebaca;
+  --lc-level-text-slate-500: #64748b;
+  --lc-bg-emerald-500: #00b579;
+  --lc-text: #000000;
 }
 
 @theme inline {
