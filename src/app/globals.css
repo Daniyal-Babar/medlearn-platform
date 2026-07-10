@@ -144,6 +144,9 @@
 
   /* FIELD */
   --field-text-slate-700: #334155;
+
+  /* SIGNIN Page */
+  --signin-text-slate-600: #475569;
 }
 
 /* Dark theme */
@@ -297,6 +300,9 @@
 
   /* FIELD */
   --field-text-slate-700: #d2d9e5;
+
+  /* SIGNIN Page */
+  --signin-text-slate-600: #b8c2d1;
 }
 
 @theme inline {
