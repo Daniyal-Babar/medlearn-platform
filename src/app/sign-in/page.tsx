@@ -52,7 +52,6 @@ export default function SignInPage() {
         Continue with Google
       </button>
 
-      {/* <p className="mt-8 text-center text-sm text-slate-600"> */}
       <p className="mt-8 text-center text-sm text-[var(--signin-text-slate-600)]">
         Don&apos;t have an account?{" "}
         <Link href="/sign-up" className="font-semibold text-teal-600 hover:text-teal-700">

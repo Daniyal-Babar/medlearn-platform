@@ -42,7 +42,6 @@ export default function Home() {
     <main>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        {/* <div className="absolute inset-0 bg-grid opacity-60" /> */}
         <div className="absolute -top-24 left-1/2 -z-10 h-[480px] w-[680px] -translate-x-1/2 rounded-full bg-gradient-to-br from-teal-200/50 to-emerald-200/40 blur-3xl" />
         <div className="relative mx-auto flex max-w-7xl flex-col items-center px-6 py-24 text-center lg:px-8 lg:py-32">
           <span className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-sm font-medium text-teal-700">
@@ -50,7 +49,6 @@ export default function Home() {
             Trusted by 60,000+ medical students
           </span>
 
-          {/* <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl"> */}
           <h1 className="mt-6 max-w-4xl text-[2.1rem] font-bold tracking-tight text-[var(--hero-text-slate-900)] sm:text-5xl">
             Master medicine with{" "}
             <span className="bg-gradient-to-r from-teal-600 to-emerald-500 bg-clip-text text-transparent">
@@ -90,7 +88,6 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      {/* <section className="bg-white py-24"> */}
       <section className="bg-[var(--about-background)] py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
@@ -108,19 +105,15 @@ export default function Home() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                // className="rounded-2xl border border-slate-200 bg-slate-50/50 p-6 transition-colors hover:border-teal-200 hover:bg-teal-50/40"
                 className="rounded-2xl border border-[var(--about-border-slate-200)] bg-[var(--about-bg-slate-50)] p-6 transition-colors hover:border-teal-200 hover:bg-[var(--about-bg-teal-50)] shadow-[0px_0px_10px_rgba(255,255,255,0.5)] shadow-2xl"
               >
-                {/* <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-600 text-white"> */}
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-600 text-[var(--about-text)]">
                   <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                     {feature.icon}
                   </svg>
                 </div>
                 <h3 className="mt-5 text-base font-semibold text-[var(--about-text-slate-900)]">{feature.title}</h3>
-                {/* <h3 className="mt-5 text-base font-semibold text-slate-900">{feature.title}</h3> */}
                 <p className="mt-2 text-sm leading-6 text-[var(--about-text-slate-600)]">{feature.description}</p>
-                {/* <p className="mt-2 text-sm leading-6 text-slate-600">{feature.description}</p> */}
               </div>
             ))}
           </div>
@@ -167,7 +160,6 @@ export default function Home() {
             {testimonials.map((t) => (
               <figure
                 key={t.name}
-                // className="flex flex-col rounded-2xl border border-slate-200 bg-slate-50/50 p-8"
                 className="flex flex-col rounded-2xl border border-slate-200 bg-[var(--review-bg-slate-50-50)] p-8 shadow-[0px_0px_10px_rgba(255,255,255,0.25)] shadow-2xl"
               >
                 <div className="flex gap-1 text-amber-400">

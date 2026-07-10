@@ -21,7 +21,6 @@ export default function Navbar() {
   const { isSignedIn } = useAuth();
 
   return (
-    // <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-md">
     <header className="sticky top-0 z-50 border-b border-[var(--navbar-border-slate-200)] bg-[var(--navbar-background)] backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
         <Logo />
@@ -60,7 +59,6 @@ export default function Navbar() {
           ) : (
             <UserButton />
           )}
-          {/* <ThemeToggle /> */}
         </div>
 
         {/* Mobile toggle */}
@@ -86,7 +84,6 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        // <div className="border-t border-slate-200 bg-[var(--navbar-background)] px-6 py-4 md:hidden">
         <div className="border-t border-[var(--navbar-border-slate-200)] bg-[var(--navbar-background)] px-6 py-4 md:hidden">
           <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
