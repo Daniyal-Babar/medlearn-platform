@@ -132,6 +132,18 @@
   --mc-bg: #ffffff;
   --mc-text-slate-900: #0f172a;
   --mc-text-slate-500: #64748b;
+
+  /* SIGNUP Page */
+  --signup-border-slate-300: #cbd5e1;
+  --signup-text-slate-600: #475569;
+  --signup-text: #ffffff;
+
+  /* AUTHSHELL */
+  --auth-text-slate-900: #0f172a;
+  --auth-text-slate-600: #475569;
+
+  /* FIELD */
+  --field-text-slate-700: #334155;
 }
 
 /* Dark theme */
@@ -271,8 +283,20 @@
   --mc-bg: #000000;
   --mc-border-slate-100: #000000;
   --mc-border-slate-200: #000000;
-  --mc-text-slate-900: #ffffff;
+  --mc-text-slate-900: c;
   --mc-text-slate-500: #aebaca;
+
+  /* SIGNUP Page */
+  --signup-border-slate-300: #f1f5f9;
+  --signup-text-slate-600: #b8c2d1;
+  --signup-text: #000000;
+
+  /* AUTHSHELL */
+  --auth-text-slate-900: #d2d9e5;
+  --auth-text-slate-600: #d2d9e5;
+
+  /* FIELD */
+  --field-text-slate-700: #d2d9e5;
 }
 
 @theme inline {

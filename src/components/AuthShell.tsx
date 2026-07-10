@@ -21,8 +21,8 @@ export default function AuthShell({
       {/* Left: form */}
       <div className="flex items-center justify-center px-6 py-16">
         <div className="w-full max-w-sm">
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900">{title}</h1>
-          <p className="mt-2 text-sm text-slate-600">{subtitle}</p>
+          <h1 className="text-2xl font-bold tracking-tight text-[var(--auth-text-slate-900)]">{title}</h1>
+          <p className="mt-2 text-sm text-[var(--auth-text-slate-600)]">{subtitle}</p>
           <div className="mt-8">{children}</div>
         </div>
       </div>

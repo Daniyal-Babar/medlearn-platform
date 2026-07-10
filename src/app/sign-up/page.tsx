@@ -8,7 +8,7 @@ export default function SignUpPage() {
       title="Create your account"
       subtitle="Start free — no credit card required."
     >
-      <form className="space-y-5" action="/dashboard">
+      <form className="signup-form space-y-5" action="/dashboard">
         <Field
           label="Full name"
           name="name"
@@ -30,10 +30,10 @@ export default function SignUpPage() {
           autoComplete="new-password"
         />
 
-        <label className="flex items-start gap-2 text-xs text-slate-600">
+        <label className="flex items-start gap-2 text-xs text-[var(--signup-text-slate-600)]">
           <input
             type="checkbox"
-            className="mt-0.5 h-4 w-4 rounded border-slate-300 text-teal-600 focus:ring-teal-500"
+            className="mt-0.5 h-4 w-4 rounded border-[var(--signup-border-slate-300)] text-teal-600 focus:ring-teal-500"
           />
           <span>
             I agree to the{" "}
@@ -56,7 +56,7 @@ export default function SignUpPage() {
         </button>
       </form>
 
-      <p className="mt-8 text-center text-sm text-slate-600">
+      <p className="mt-8 text-center text-sm text-[var(--signup-text-slate-600)]">
         Already have an account?{" "}
         <Link href="/sign-in" className="font-semibold text-teal-600 hover:text-teal-700">
           Sign in
