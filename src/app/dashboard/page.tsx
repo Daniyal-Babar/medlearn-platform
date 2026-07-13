@@ -68,7 +68,9 @@ export default function DashboardPage() {
                 key={course.id}
                 className="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-5 sm:flex-row sm:items-center"
               >
-                <div className={`h-16 w-24 flex-none rounded-xl bg-gradient-to-br ${course.accent}`} />
+                <div className="relative h-16 w-24 flex-none overflow-hidden rounded-xl bg-slate-200">
+                  <img src={course.image} alt={course.title} className="absolute inset-0 h-full w-full object-cover" />
+                </div>
 
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">

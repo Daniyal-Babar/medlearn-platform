@@ -11,7 +11,7 @@ export type Lecture = {
   level: "Beginner" | "Intermediate" | "Advanced";
   rating: number;
   students: number;
-  accent: string; // tailwind gradient classes for the cover
+  image: string; // image url for the cover
   free: boolean;
 };
 
@@ -35,7 +35,7 @@ export const lectures: Lecture[] = [
     level: "Beginner",
     rating: 4.9,
     students: 12450,
-    accent: "from-teal-500 to-emerald-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: true,
   },
   {
@@ -48,7 +48,7 @@ export const lectures: Lecture[] = [
     level: "Intermediate",
     rating: 4.8,
     students: 8920,
-    accent: "from-rose-500 to-red-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
   {
@@ -61,7 +61,7 @@ export const lectures: Lecture[] = [
     level: "Advanced",
     rating: 4.9,
     students: 10310,
-    accent: "from-indigo-500 to-violet-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
   {
@@ -74,7 +74,7 @@ export const lectures: Lecture[] = [
     level: "Intermediate",
     rating: 4.7,
     students: 7640,
-    accent: "from-amber-500 to-orange-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
   {
@@ -87,7 +87,7 @@ export const lectures: Lecture[] = [
     level: "Advanced",
     rating: 5.0,
     students: 5980,
-    accent: "from-cyan-500 to-blue-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
   {
@@ -100,7 +100,7 @@ export const lectures: Lecture[] = [
     level: "Intermediate",
     rating: 4.8,
     students: 6720,
-    accent: "from-fuchsia-500 to-purple-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
 ];
@@ -112,7 +112,7 @@ export type Note = {
   durationHours: number;
   pages: number;
   students: number;
-  accent: string; // tailwind gradient classes for the cover
+  image: string; // image url for the cover
   free: boolean;
 };
 
@@ -124,7 +124,7 @@ export const notes: Note[] = [
     durationHours: 18,
     pages: 64,
     students: 12450,
-    accent: "from-teal-500 to-emerald-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: true,
   },
   {
@@ -134,7 +134,7 @@ export const notes: Note[] = [
     durationHours: 12,
     pages: 42,
     students: 8920,
-    accent: "from-rose-500 to-red-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
   {
@@ -144,7 +144,7 @@ export const notes: Note[] = [
     durationHours: 22,
     pages: 78,
     students: 10310,
-    accent: "from-indigo-500 to-violet-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
   {
@@ -154,7 +154,7 @@ export const notes: Note[] = [
     durationHours: 16,
     pages: 55,
     students: 7640,
-    accent: "from-amber-500 to-orange-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
   {
@@ -164,7 +164,7 @@ export const notes: Note[] = [
     durationHours: 9,
     pages: 31,
     students: 5980,
-    accent: "from-cyan-500 to-blue-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
   {
@@ -174,7 +174,7 @@ export const notes: Note[] = [
     durationHours: 14,
     pages: 48,
     students: 6720,
-    accent: "from-fuchsia-500 to-purple-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
 ];
@@ -185,7 +185,7 @@ export type Mcq = {
   title: string;
   number_of_mcqs: number;
   students: number;
-  accent: string; // tailwind gradient classes for the cover
+  image: string; // image url for the cover
   free: boolean;
 };
 
@@ -195,7 +195,7 @@ export const mcqs: Mcq[] = [
     title: "Chapter 1",
     number_of_mcqs: 64,
     students: 12450,
-    accent: "from-teal-500 to-emerald-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: true,
   },
   {
@@ -203,7 +203,7 @@ export const mcqs: Mcq[] = [
     title: "Chapter 2",
     number_of_mcqs: 42,
     students: 8920,
-    accent: "from-rose-500 to-red-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
   {
@@ -211,7 +211,7 @@ export const mcqs: Mcq[] = [
     title: "Chapter 3",
     number_of_mcqs: 78,
     students: 10310,
-    accent: "from-indigo-500 to-violet-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
   {
@@ -219,7 +219,7 @@ export const mcqs: Mcq[] = [
     title: "Chapter 4",
     number_of_mcqs: 55,
     students: 7640,
-    accent: "from-amber-500 to-orange-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
   {
@@ -227,7 +227,7 @@ export const mcqs: Mcq[] = [
     title: "Chapter 5",
     number_of_mcqs: 31,
     students: 5980,
-    accent: "from-cyan-500 to-blue-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
   {
@@ -235,7 +235,7 @@ export const mcqs: Mcq[] = [
     title: "Chapter 6",
     number_of_mcqs: 48,
     students: 6720,
-    accent: "from-fuchsia-500 to-purple-600",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2071&auto=format&fit=crop",
     free: false,
   },
 ];

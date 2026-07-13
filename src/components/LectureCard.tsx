@@ -5,7 +5,8 @@ export default function LectureCard({ lecture }: { lecture: Lecture }) {
   return (
     <div className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--lc-border-slate-200)] bg-[var(--lc-bg)] shadow-2xl shadow-[0px_0px_10px_rgba(255,255,255,0.25)] transition-all hover:-translate-y-1">
       {/* Cover */}
-      <div className={`relative h-40 bg-gradient-to-br ${lecture.accent}`}>
+      <div className="relative h-40">
+        <img src={lecture.image} alt={lecture.title} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-grid opacity-20" />
         <div className="absolute left-4 top-4 flex gap-2">
           <span className="rounded-full bg-[var(--lc-bg)] px-2.5 py-1 text-xs font-semibold text-[var(--lc-text-slate-700)] backdrop-blur">

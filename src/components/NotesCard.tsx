@@ -5,7 +5,8 @@ export default function NoteCard({ Note }: { Note: Note }) {
   return (
     <div className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--nc-border-slate-200)] bg-[var(--nc-bg)] shadow-[0px_0px_10px_rgba(255,255,255,0.25)] shadow-2xl transition-all hover:-translate-y-1">
       {/* Cover */}
-      <div className={`relative h-40 bg-gradient-to-br ${Note.accent}`}>
+      <div className="relative h-40">
+        <img src={Note.image} alt={Note.title} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-grid opacity-20" />
         <div className="absolute left-4 top-4 flex gap-2">
           {Note.free && (
