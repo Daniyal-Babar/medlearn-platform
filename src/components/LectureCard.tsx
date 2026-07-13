@@ -3,7 +3,7 @@ import type { Lecture } from "@/lib/data";
 
 export default function LectureCard({ lecture }: { lecture: Lecture }) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--lc-border-slate-200)] bg-[var(--lc-bg)] shadow-2xl shadow-[0px_0px_10px_rgba(255,255,255,0.25)] transition-all hover:-translate-y-1">
+    <Link href="/api/pdf" target="_blank" className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--lc-border-slate-200)] bg-[var(--lc-bg)] shadow-2xl shadow-[0px_0px_10px_rgba(255,255,255,0.25)] transition-all hover:-translate-y-1">
       {/* Cover */}
       <div className="relative h-40">
         <img src={lecture.image} alt={lecture.title} className="absolute inset-0 h-full w-full object-cover" />
@@ -62,14 +62,13 @@ export default function LectureCard({ lecture }: { lecture: Lecture }) {
           <span className="text-xs text-[var(--lc-text-slate-500)]">
             {lecture.students.toLocaleString()} enrolled
           </span>
-          <Link
-            href="/sign-up"
+          <span
             className="text-sm font-semibold text-teal-600 transition-colors hover:text-teal-700"
           >
             {lecture.free ? "Watch free →" : "Unlock →"}
-          </Link>
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
