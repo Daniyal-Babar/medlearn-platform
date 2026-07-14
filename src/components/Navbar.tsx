@@ -62,7 +62,8 @@ export default function Navbar() {
         </div>
 
         {/* Mobile toggle */}
-        <div>
+        {/* <div> */}
+        <div className="flex items-center gap-2">
           <ThemeToggle />
         <button
           type="button"
