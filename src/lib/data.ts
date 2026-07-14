@@ -240,6 +240,149 @@ export const mcqs: Mcq[] = [
   },
 ];
 
+// A single multiple-choice question.
+export type McqQuestion = {
+  id: string;
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+};
+
+// Placeholder question bank. Swap for chapter-specific questions once available.
+export const sampleMcqQuestions: McqQuestion[] = [
+  {
+    id: "q1",
+    question: "Which of the following is the primary mechanism of action of aspirin?",
+    options: [
+      "Reversible inhibition of cyclooxygenase",
+      "Irreversible inhibition of cyclooxygenase",
+      "Blockade of beta-adrenergic receptors",
+      "Inhibition of angiotensin-converting enzyme",
+    ],
+    correctIndex: 1,
+    explanation:
+      "Aspirin irreversibly acetylates cyclooxygenase (COX-1 and COX-2), which is why its antiplatelet effect lasts for the life of the platelet.",
+  },
+  {
+    id: "q2",
+    question: "A patient on warfarin has an elevated INR. Which agent is used to reverse its effect?",
+    options: ["Protamine sulfate", "Vitamin K", "Naloxone", "Flumazenil"],
+    correctIndex: 1,
+    explanation:
+      "Warfarin inhibits vitamin K–dependent clotting factors, so vitamin K (phytonadione) reverses its anticoagulant effect. Protamine reverses heparin.",
+  },
+  {
+    id: "q3",
+    question: "Which class of drugs is first-line for a hypertensive patient with diabetic nephropathy?",
+    options: [
+      "Calcium channel blockers",
+      "Thiazide diuretics",
+      "ACE inhibitors",
+      "Alpha blockers",
+    ],
+    correctIndex: 2,
+    explanation:
+      "ACE inhibitors reduce intraglomerular pressure and slow progression of diabetic nephropathy, making them first-line in this population.",
+  },
+  {
+    id: "q4",
+    question: "The therapeutic effect of beta-2 agonists like salbutamol in asthma is due to:",
+    options: [
+      "Bronchial smooth muscle relaxation",
+      "Increased mucus secretion",
+      "Vasoconstriction of pulmonary vessels",
+      "Inhibition of histamine release only",
+    ],
+    correctIndex: 0,
+    explanation:
+      "Beta-2 agonists stimulate beta-2 receptors on bronchial smooth muscle, raising cAMP and causing bronchodilation.",
+  },
+  {
+    id: "q5",
+    question: "Which antibiotic is contraindicated in pregnancy due to effects on fetal cartilage and teeth?",
+    options: ["Amoxicillin", "Tetracycline", "Erythromycin", "Cephalexin"],
+    correctIndex: 1,
+    explanation:
+      "Tetracyclines chelate calcium and deposit in developing bones and teeth, causing discoloration and impaired growth; they are avoided in pregnancy and young children.",
+  },
+  {
+    id: "q6",
+    question: "Digoxin toxicity is potentiated by which electrolyte abnormality?",
+    options: ["Hyperkalemia", "Hypokalemia", "Hypernatremia", "Hypercalcemia"],
+    correctIndex: 1,
+    explanation:
+      "Hypokalemia increases digoxin binding to the Na+/K+-ATPase, enhancing its effect and the risk of toxicity.",
+  },
+  {
+    id: "q7",
+    question: "Which drug is the antidote for opioid overdose?",
+    options: ["Flumazenil", "Naloxone", "Atropine", "N-acetylcysteine"],
+    correctIndex: 1,
+    explanation:
+      "Naloxone is a competitive opioid receptor antagonist that rapidly reverses opioid-induced respiratory depression.",
+  },
+  {
+    id: "q8",
+    question: "Statins lower cholesterol primarily by inhibiting which enzyme?",
+    options: [
+      "Lipoprotein lipase",
+      "HMG-CoA reductase",
+      "Acetyl-CoA carboxylase",
+      "Squalene synthase",
+    ],
+    correctIndex: 1,
+    explanation:
+      "Statins competitively inhibit HMG-CoA reductase, the rate-limiting enzyme in hepatic cholesterol synthesis.",
+  },
+  {
+    id: "q9",
+    question: "Which of the following is a common adverse effect of ACE inhibitors?",
+    options: ["Dry cough", "Hyperglycemia", "Tachycardia", "Weight gain"],
+    correctIndex: 0,
+    explanation:
+      "ACE inhibitors reduce bradykinin breakdown, leading to accumulation and a characteristic dry, persistent cough.",
+  },
+  {
+    id: "q10",
+    question: "Acetaminophen (paracetamol) overdose is treated with:",
+    options: ["Naloxone", "N-acetylcysteine", "Vitamin K", "Deferoxamine"],
+    correctIndex: 1,
+    explanation:
+      "N-acetylcysteine replenishes hepatic glutathione, detoxifying the reactive metabolite NAPQI that causes liver injury in overdose.",
+  },
+  {
+    id: "q11",
+    question: "Which diuretic acts on the ascending limb of the loop of Henle?",
+    options: ["Spironolactone", "Hydrochlorothiazide", "Furosemide", "Acetazolamide"],
+    correctIndex: 2,
+    explanation:
+      "Furosemide is a loop diuretic that inhibits the Na+/K+/2Cl- cotransporter in the thick ascending limb of the loop of Henle.",
+  },
+  {
+    id: "q12",
+    question: "The main site of drug metabolism in the body is the:",
+    options: ["Kidney", "Liver", "Lung", "Spleen"],
+    correctIndex: 1,
+    explanation:
+      "The liver, via the cytochrome P450 enzyme system, is the principal organ for phase I and phase II drug metabolism.",
+  },
+];
+
+// Returns a deterministic subset of the sample bank for a given chapter so the
+// server and client render the same questions (no hydration mismatch).
+export function getMcqQuestions(chapterId: string, count = 8): McqQuestion[] {
+  const offset =
+    Math.abs(
+      chapterId.split("").reduce((acc, ch) => acc + ch.charCodeAt(0), 0)
+    ) % sampleMcqQuestions.length;
+  const bank = sampleMcqQuestions;
+  return Array.from({ length: Math.min(count, bank.length) }, (_, i) => {
+    const q = bank[(offset + i) % bank.length];
+    return { ...q, id: `${chapterId}-${i + 1}` };
+  });
+}
+
 export type Plan = {
   name: string;
   price: number;

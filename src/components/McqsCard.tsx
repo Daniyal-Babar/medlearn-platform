@@ -3,7 +3,10 @@ import type { Mcq } from "@/lib/data";
 
 export default function McqCard({ Mcq }: { Mcq: Mcq }) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--mc-border-slate-200)] bg-[var(--mc-bg)] shadow-[0px_0px_10px_rgba(255,255,255,0.25)] shadow-2xl transition-all hover:-translate-y-1">
+    <Link
+      href={`/mcqs/${Mcq.id}`}
+      className="group flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-[var(--mc-border-slate-200)] bg-[var(--mc-bg)] shadow-[0px_0px_10px_rgba(255,255,255,0.25)] shadow-2xl transition-all hover:-translate-y-1"
+    >
       {/* Cover */}
       <div className="relative h-40">
         <img src={Mcq.image} alt={Mcq.title} className="absolute inset-0 h-full w-full object-cover" />
@@ -37,14 +40,11 @@ export default function McqCard({ Mcq }: { Mcq: Mcq }) {
           <span className="text-xs text-[var(--mc-text-slate-500)]">
             {Mcq.students.toLocaleString()} enrolled
           </span>
-          <Link
-            href="/sign-up"
-            className="text-sm font-semibold text-teal-600 transition-colors hover:text-teal-700"
-          >
-            {Mcq.free ? "Watch free →" : "Unlock →"}
-          </Link>
+          <span className="text-sm font-semibold text-teal-600 transition-colors group-hover:text-teal-700">
+            {Mcq.free ? "Start free →" : "Practice →"}
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
