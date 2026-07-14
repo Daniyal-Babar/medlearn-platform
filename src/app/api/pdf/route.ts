@@ -1,8 +1,16 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
-export async function GET() {
+// Header the in-app viewer sends. Requiring it blocks casual direct downloads
+// (e.g. opening /api/pdf in a new tab), which won't carry the header.
+const VIEWER_HEADER = "x-medlearn-viewer";
+
+export async function GET(request: NextRequest) {
+  if (request.headers.get(VIEWER_HEADER) !== "1") {
+    return new NextResponse("Not available", { status: 403 });
+  }
+
   try {
     const filePath = path.join(process.cwd(), "src/lectures/Netflix.pdf");
     const fileBuffer = fs.readFileSync(filePath);
@@ -10,10 +18,12 @@ export async function GET() {
     return new NextResponse(fileBuffer, {
       headers: {
         "Content-Type": "application/pdf",
-        "Content-Disposition": 'inline; filename="Netflix.pdf"',
+        // inline (never "attachment") so browsers don't offer a save dialog
+        "Content-Disposition": "inline",
+        "Cache-Control": "no-store",
       },
     });
-  } catch (error) {
+  } catch {
     return new NextResponse("PDF not found", { status: 404 });
   }
 }

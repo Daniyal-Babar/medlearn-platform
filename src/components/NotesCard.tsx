@@ -3,7 +3,7 @@ import type { Note } from "@/lib/data";
 
 export default function NoteCard({ Note }: { Note: Note }) {
   return (
-    <Link href="/api/pdf" target="_blank" className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--nc-border-slate-200)] bg-[var(--nc-bg)] shadow-[0px_0px_10px_rgba(255,255,255,0.25)] shadow-2xl transition-all hover:-translate-y-1">
+    <Link href={`/notes/${Note.id}`} className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--nc-border-slate-200)] bg-[var(--nc-bg)] shadow-[0px_0px_10px_rgba(255,255,255,0.25)] shadow-2xl transition-all hover:-translate-y-1">
       {/* Cover */}
       <div className="relative h-40">
         <img src={Note.image} alt={Note.title} className="absolute inset-0 h-full w-full object-cover" />
@@ -45,9 +45,9 @@ export default function NoteCard({ Note }: { Note: Note }) {
             {Note.students.toLocaleString()} enrolled
           </span>
           <span
-            className="text-sm font-semibold text-teal-600 transition-colors hover:text-teal-700"
+            className="text-sm font-semibold text-teal-600 transition-colors group-hover:text-teal-700"
           >
-            {Note.free ? "Watch free →" : "Unlock →"}
+            {Note.free ? "Read free →" : "Read →"}
           </span>
         </div>
       </div>
