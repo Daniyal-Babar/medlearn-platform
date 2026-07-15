@@ -23,6 +23,7 @@ export default async function NoteDetailPage({
           <Link
             href="/notes"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--note-text-slate-500)] transition hover:text-teal-600"
+            // className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-100 transition hover:text-teal-600"
           >
             <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />

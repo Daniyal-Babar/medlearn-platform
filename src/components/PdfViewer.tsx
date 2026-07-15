@@ -127,8 +127,8 @@ export default function PdfViewer({ url }: Props) {
           {loading
             ? "Loading…"
             : error
-            ? "Failed to load"
-            : `${numPages} page${numPages === 1 ? "" : "s"}`}
+              ? "Failed to load"
+              : `${numPages} page${numPages === 1 ? "" : "s"}`}
         </span>
         <div className="flex items-center gap-1">
           <button
